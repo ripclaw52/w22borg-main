@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SelectEmployee">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_Active2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Active"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/sw_canOpen"
+        app:layout_constraintStart_toEndOf="@+id/edt_startDate"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phoneNo"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <EditText
+        android:id="@+id/edt_f_name"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/FN"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@id/edt_l_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_l_name"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/LN"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edt_f_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:ems="14"
+        android:hint="@string/EMAIL"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_l_name" />
+
+    <EditText
+        android:id="@+id/edt_phoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/PHONE"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+    <TextView
+        android:id="@+id/edt_startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/STARTDATE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phoneNo" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_canOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:inputType="time"
+        android:text="@string/CanOpen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_startDate" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_canClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CanClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toEndOf="@id/sw_canOpen"
+        app:layout_constraintTop_toTopOf="@+id/sw_canOpen" />
+
+    <Button
+        android:id="@+id/saveEm_bttn"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_canOpen"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <Button
+        android:id="@+id/delEm_bttn"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/red"
+        android:visibility="visible"
+        android:text="@string/Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/saveEm_bttn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/saveEm_bttn"
+        app:layout_constraintTop_toBottomOf="@+id/saveEm_bttn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/FirstName"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edt_f_name"
+        app:layout_constraintStart_toStartOf="@+id/edt_f_name" />
+
+    <TextView
+        android:id="@+id/textView_lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LastName"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edt_l_name"
+        app:layout_constraintStart_toStartOf="@+id/edt_l_name" />
+
+    <TextView
+        android:id="@+id/textView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edt_email"
+        app:layout_constraintStart_toStartOf="@+id/edt_email" />
+
+    <TextView
+        android:id="@+id/textView_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edt_phoneNo"
+        app:layout_constraintStart_toStartOf="@+id/edt_phoneNo" />
+
+    <TextView
+        android:id="@+id/textView_startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edt_startDate"
+        app:layout_constraintStart_toStartOf="@+id/edt_startDate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

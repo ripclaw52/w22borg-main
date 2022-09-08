@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:text="\nBorg"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:text="Employee"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:text="Management"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:text="System"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary" />
+</LinearLayout>

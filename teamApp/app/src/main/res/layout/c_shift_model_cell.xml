@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lineLayout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/employeeCellLV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/empIDTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:text="@string/employee_id_in_shift"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/empNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/employee_name_in_shift"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/empOpenStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textAlignment="textEnd"
+            android:visibility="visible"
+            app:drawableRightCompat="@drawable/ic_open"
+            app:drawableTint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/empCloseStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textAlignment="textEnd"
+            android:visibility="visible"
+            app:drawableRightCompat="@drawable/ic_closing"
+            app:drawableTint="?attr/colorPrimary" />
+
+    </LinearLayout>
+
+</LinearLayout>

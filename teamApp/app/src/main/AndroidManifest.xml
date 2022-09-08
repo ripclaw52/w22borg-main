@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.w22borg">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WEARETHEBORG">
+        <activity
+            android:name=".calendar.AddEmployeeToShiftAllDay"
+            android:exported="false"
+            android:parentActivityName=".calendar.WeekViewActivity" />
+        <activity
+            android:name=".calendar.AddEmployeeToShiftClose"
+            android:exported="false"
+            android:parentActivityName=".calendar.WeekViewActivity" />
+        <activity
+            android:name=".calendar.AddEmployeeToShiftOpen"
+            android:exported="false"
+            android:parentActivityName=".calendar.WeekViewActivity" />
+        <activity
+            android:name=".view.EditAvailability"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditingEmployee"
+            android:exported="false"
+            android:parentActivityName=".view.SelectEmployee" />
+        <activity
+            android:name=".view.ViewEmployee"
+            android:exported="false"
+            android:parentActivityName=".view.SelectEmployee" />
+        <activity
+            android:name=".view.SelectEmployee"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".calendar.CalendarActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".calendar.WeekViewActivity"
+            android:exported="false"
+            android:parentActivityName=".calendar.CalendarActivity" />
+        <activity
+            android:name=".view.AddEmployee"
+            android:exported="false"
+            android:parentActivityName=".view.SelectEmployee" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

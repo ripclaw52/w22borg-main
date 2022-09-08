@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calendar.AddEmployeeToShiftClose">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionbar_addEmployeeToShift"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:titleTextColor="?attr/colorOnPrimary" >
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_busyDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="Busy Day"
+            android:onClick="switchIsBusyDay"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/confirmation_selection"
+        app:layout_constraintTop_toBottomOf="@+id/actionbar_addEmployeeToShift">
+
+        <TextView
+            android:id="@+id/shiftDateAndTypeTV"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|center_vertical"
+            android:text="Close Shift"
+            android:textSize="20sp" />
+
+        <ListView
+            android:id="@+id/workingEmployeesInShiftClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_viewAll_cs"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonPressViewAll"
+                android:text="@string/ViewAllEmp"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_open_cs"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonPressOpenTrained"
+                android:text="View Openers"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_close_cs"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonPressCloseTrained"
+                android:text="View Closers"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_active_cs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonPressActive"
+                android:text="View Active"
+                android:textSize="8sp"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_inactive_cs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonPressInactive"
+                android:text="View Inactive"
+                android:textSize="8sp"
+                android:visibility="gone"
+                tools:visibility="gone" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_empList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/confirmation_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+        <Button
+            android:id="@+id/cancel_cs"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="RemoveEmployeeShiftChangesOpen"
+            android:text="Cancel"
+            android:textColor="?attr/colorError" />
+
+        <Button
+            android:id="@+id/confirm_cs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ConfirmEmployeeShiftChangesOpen"
+            android:text="Confirm" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

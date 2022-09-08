@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/Theme.AppCompat.Light" />
+
+        <TextView
+            android:id="@+id/date_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_date"
+            android:drawablePadding="5dp"
+            android:drawableTint="?attr/colorPrimary"
+            android:gravity="center_vertical"
+            android:paddingLeft="7dp"
+            android:text="current_date"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/open_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/open_box"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_above="@+id/open_list"
+            android:layout_marginBottom="2dp"
+            android:paddingLeft="5dp"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_baseline_wb_sunny_24"
+            android:text="Opening"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#ffa500"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_box" />
+
+        <TextView
+            android:id="@+id/warningOP"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_above="@+id/open_list"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="140dp"
+            android:layout_marginBottom="2dp"
+            android:drawableLeft="@drawable/ic_warning"
+            android:drawablePadding="5dp"
+            android:paddingLeft="5dp"
+            android:text="Missing worker(s)"
+            android:textColor="@color/red"
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintStart_toEndOf="@id/open_box"
+            app:layout_constraintTop_toBottomOf="@+id/date_box" />
+
+        <TextView
+            android:id="@+id/full_box"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_above="@+id/open_list"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toStartOf="@+id/warningOP"
+            android:drawableLeft="@drawable/ic_fullshift"
+            android:drawablePadding="5dp"
+            android:drawableTint="?attr/colorPrimary"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="All Day"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_box" />
+
+        <TextView
+            android:id="@+id/close_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/closing_list"
+            android:layout_marginBottom="2dp"
+            android:drawableLeft="@drawable/ic_baseline_nights_stay_24"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Closing"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/warningCl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/closing_list"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="145dp"
+            android:layout_marginBottom="2dp"
+            android:drawableLeft="@drawable/ic_warning"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Missing worker(s)"
+            android:textColor="@color/red"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ListView
+            android:id="@+id/closing_list"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="90dp" />
+
+        <ListView
+            android:id="@+id/open_list"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_above="@+id/closing_list"
+            android:layout_marginBottom="40dp" />
+
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@menu/nav_top_display"
+        app:menu="@menu/navigation_menu"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
